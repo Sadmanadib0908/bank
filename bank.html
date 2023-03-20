@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center mt-6 text-6xl text-blue-600 font-semibold">My Account</h1>
+    </header>
+    <main>
+        <section class="mt-6 ">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4 mx-auto">
+                <div class="bg-green-600 text-white p-5 rounded-lg m-5 text-3xl " id="box">
+                    <h4>Deposite</h4>
+                    <h2>$<span id="deposit-amount">00</span></h2>
+                </div>
+
+                <div class="bg-red-600 text-white p-5 rounded-lg m-5 text-3xl " id="box">
+                    <h4>Withdraw</h4>
+                    <h2>$<span id="withdraw-amount">00</span></h2>
+                </div>
+
+                <div class="bg-yellow-400 text-white p-5 rounded-lg m-5 text-3xl " id="box">
+                    <h4>Balance</h4>
+                    <h2>$<span id="balance-amount">00</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- Deposite and withdraw input -->
+        <section>
+            <div class="grid grid-cols-1 md:grid-cols-2 mt-12">
+                <div class="bg-indigo-600  p-8 rounded-lg m-5  " id="box">
+                    <h4 class="text-white text-3xl">Please Deposite</h4>
+                    <input type="number" class=" p-3 block w-1/2 mt-6" placeholder="Deposite amount" name=""
+                        id="deposit-field">
+                    <button id="deposit-btn"
+                        class="mx-auto mt-5 bg-blue-600 text-white border-2 border-blue-600 px-8 py-2 rounded-lg">Deposit</button>
+                </div>
+
+                <div class="bg-fuchsia-400 p-8 rounded-lg m-5  " id="box">
+                    <h4 class=" text-white text-3xl">Please Withdraw</h4>
+                    <input type="number" class=" p-3  block w-1/2 mt-6" placeholder="Withdraw amount" name=""
+                        id="withdraw-field">
+                    <button id="withdraw-btn"
+                        class="mx-auto mt-5 bg-blue-600 text-white border-2 border-blue-600 px-8 py-2 rounded-lg">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="margin-top: 21%;" class="">
+        <h1 class="text-center text-blue-600">©CREATED BY : SAYED MD. SHADMAN ADIB</h1>
+       </footer>
+    <script src="locker.js"></script>
+    <script src="withdraw.js"></script>
+</body>
+
+</html>
