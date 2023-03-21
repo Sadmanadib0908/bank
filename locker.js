@@ -15,6 +15,9 @@ loanBtn.addEventListener('click',function(){
         alert('you can not take loan more than 10000')
         
     }
+    else if(loanFieldFloat < 0){
+        alert('please give the amount in positive')
+    }
     else{
         loanAmount.innerText = loanAmountFloat + loanFieldFloat
         balance.innerText = (parseFloat(balance.innerText)) + loanFieldFloat   
@@ -44,6 +47,7 @@ depositBtn.addEventListener('click', function () {
         balance.innerText = balanceCurrentAmount + (newDepositField - (parseFloat(loanAmount.innerText)))
         loanAmount.innerText = (parseFloat(loanAmount.innerText)) - (parseFloat(loanAmount.innerText))
     }
+    
     else{
         balance.innerText = balanceCurrentAmount;
         loanAmount.innerText = (parseFloat(loanAmount.innerText)) - newDepositField
