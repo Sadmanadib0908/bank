@@ -3,8 +3,27 @@ const depositField = document.getElementById('deposit-field')
 const previousDepositAmount = document.getElementById('deposit-amount')
 // balance
 const balance = document.getElementById('balance-amount');
+const loanBtn = document.getElementById('loan-btn');
+const loanAmount = document.getElementById('loan-amount');
 
-
+loanBtn.addEventListener('click',function(){
+   
+    const loanAmountFloat = parseFloat(loanAmount.innerText);
+    const loanField = document.getElementById('loan-field');
+    const loanFieldFloat = parseFloat(loanField.value);
+    if(loanFieldFloat > 10000 || loanAmountFloat >= 10000 || (loanFieldFloat+loanAmountFloat) > 10000){
+        alert('you can not take loan more than 10000')
+        
+    }
+    else{
+        loanAmount.innerText = loanAmountFloat + loanFieldFloat
+        balance.innerText = (parseFloat(balance.innerText)) + loanFieldFloat   
+        
+    }
+    loanField.value = '';  
+   
+    
+})
 
 depositBtn.addEventListener('click', function () {
     // balance related
@@ -17,7 +36,18 @@ depositBtn.addEventListener('click', function () {
     // result related
     const finalDeposit = newPreviousDepositAmount + newDepositField;
     const newBalanceAmount = balanceCurrentAmount + newDepositField;
-    balance.innerText = newBalanceAmount
+    
+    if((parseFloat(loanAmount.innerText)) < 1){
+        balance.innerText = newBalanceAmount
+    }
+    else if(newDepositField >= (parseFloat(loanAmount.innerText))){
+        balance.innerText = balanceCurrentAmount + (newDepositField - (parseFloat(loanAmount.innerText)))
+        loanAmount.innerText = (parseFloat(loanAmount.innerText)) - (parseFloat(loanAmount.innerText))
+    }
+    else{
+        balance.innerText = balanceCurrentAmount;
+        loanAmount.innerText = (parseFloat(loanAmount.innerText)) - newDepositField
+    }
     previousDepositAmount.innerText = finalDeposit
     // clearing input field
     depositField.value = ''

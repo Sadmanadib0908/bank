@@ -18,7 +18,7 @@
     </header>
     <main>
         <section class="mt-6 ">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-4 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-0 md:gap-2 mx-auto">
                 <div class="bg-green-600 text-white p-5 rounded-lg m-5 text-3xl " id="box">
                     <h4>Deposite</h4>
                     <h2>$<span id="deposit-amount">00</span></h2>
@@ -28,16 +28,21 @@
                     <h4>Withdraw</h4>
                     <h2>$<span id="withdraw-amount">00</span></h2>
                 </div>
+                <div class="bg-pink-400 text-white p-5 rounded-lg m-5 text-3xl " id="box">
+                    <h4>Loan</h4>
+                    <h2>$<span id="loan-amount">00</span></h2>
+                </div>
 
                 <div class="bg-yellow-400 text-white p-5 rounded-lg m-5 text-3xl " id="box">
                     <h4>Balance</h4>
                     <h2>$<span id="balance-amount">00</span></h2>
                 </div>
+
             </div>
         </section>
         <!-- Deposite and withdraw input -->
         <section>
-            <div class="grid grid-cols-1 md:grid-cols-2 mt-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 mt-12">
                 <div class="bg-indigo-600  p-8 rounded-lg m-5  " id="box">
                     <h4 class="text-white text-3xl">Please Deposite</h4>
                     <input type="number" class=" p-3 block w-1/2 mt-6" placeholder="Deposite amount" name=""
@@ -53,12 +58,19 @@
                     <button id="withdraw-btn"
                         class="mx-auto mt-5 bg-blue-600 text-white border-2 border-blue-600 px-8 py-2 rounded-lg">Withdraw</button>
                 </div>
+                <div class="bg-fuchsia-400 p-8 rounded-lg m-5  " id="box">
+                    <h4 class=" text-white text-3xl">Loan</h4>
+                    <input type="number" class=" p-3  block w-1/2 mt-6" placeholder="Loan amount" name=""
+                        id="loan-field">
+                    <button id="loan-btn"
+                        class="mx-auto mt-5 bg-blue-600 text-white border-2 border-blue-600 px-8 py-2 rounded-lg">Loan</button>
+                </div>
             </div>
         </section>
     </main>
     <footer style="margin-top: 21%;" class="">
         <h1 class="text-center text-blue-600">©CREATED BY : SAYED MD. SHADMAN ADIB</h1>
-       </footer>
+    </footer>
     <script src="locker.js"></script>
     <script src="withdraw.js"></script>
 </body>
